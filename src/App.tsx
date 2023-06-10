@@ -1,7 +1,6 @@
 import { Home } from "./Pages";
 
 function App() {
-
   return (
     <>
       <Home />
