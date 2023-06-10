@@ -1,6 +1,9 @@
-import { Box, Card, CardMedia } from "@mui/material";
+import { Box, Card, CardMedia, Grid } from "@mui/material";
 import { StyledComplianceButton, StyledHeader } from "./Home.styles";
-import { WarningCircle } from "@phosphor-icons/react";
+import { FolderSimple, Star, WarningCircle } from "@phosphor-icons/react";
+import { HomeCard } from "@/Components";
+import { PreviewIcon } from "@/assets/PreviewIcon";
+import { UnreadEye } from "@/assets/UnreadEye";
 
 export const Home: React.FC = () => {
   return (
@@ -28,6 +31,26 @@ export const Home: React.FC = () => {
           In Compliance
         </StyledComplianceButton>
       </Box>
+      <Grid container columnSpacing={5} sx={{ padding: "20px 40px 40px 40px" }}>
+        <Grid item xs={3}>
+          <HomeCard
+            icon={<Star size={70} weight="fill" color="#9399a2" />}
+            title="Favorites"
+          />
+        </Grid>
+        <Grid item xs={3}>
+          <HomeCard
+            icon={<FolderSimple size={70} weight="fill" color="#9399a2" />}
+            title="All Publications"
+          />
+        </Grid>
+        <Grid item xs={3}>
+          <HomeCard icon={<UnreadEye />} title="Unread" />
+        </Grid>
+        <Grid item xs={3}>
+          <HomeCard icon={<PreviewIcon />} title="Preview" />
+        </Grid>
+      </Grid>
     </>
   );
 };

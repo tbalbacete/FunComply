@@ -2,12 +2,10 @@
   "extends": [
     "eslint:recommended",
     "plugin:react/recommended",
-    "plugin:import/recommended",
     "plugin:jsx-a11y/recommended",
     "plugin:@typescript-eslint/recommended",
     "plugin:prettier/recommended",
-    "eslint-config-prettier",
-    "plugin:import/typescript"
+    "eslint-config-prettier"
   ],
   "parser": "@typescript-eslint/parser",
   "plugins": [
@@ -26,7 +24,8 @@
           ".js",
           ".jsx",
           ".ts",
-          ".tsx"
+          ".tsx",
+          ".d.ts"
         ]
       }
     }
