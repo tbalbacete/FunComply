@@ -11,7 +11,7 @@ export const HomeCard: React.FC<Props> = ({ icon, title }: Props) => {
     <StyledCard>
       <StyledContent>
         {icon}
-        <Typography variant="body2" sx={{ paddingTop: "20px" }}>
+        <Typography variant="body2" sx={{ paddingTop: "20px", fontSize: "15px" }}>
           {title}
         </Typography>
       </StyledContent>

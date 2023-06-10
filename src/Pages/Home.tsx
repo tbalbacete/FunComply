@@ -31,7 +31,7 @@ export const Home: React.FC = () => {
           In Compliance
         </StyledComplianceButton>
       </Box>
-      <Grid container columnSpacing={5} sx={{ padding: "20px 40px 40px 40px" }}>
+      <Grid container columnSpacing={5} sx={{ padding: "20px 40px 40px 40px", borderBottom: "2px solid rgba(224, 224, 224, 0.3)" }}>
         <Grid item xs={3}>
           <HomeCard
             icon={<Star size={70} weight="fill" color="#9399a2" />}
