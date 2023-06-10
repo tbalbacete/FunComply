@@ -1,5 +1,4 @@
-import { Typography } from "@mui/material";
-import { StyledCard, StyledContent } from "./HomeCard.styles";
+import { StyledCard, StyledContent, StyledTitle } from "./HomeCard.styles";
 
 type Props = {
   icon: React.ReactNode;
@@ -11,9 +10,7 @@ export const HomeCard: React.FC<Props> = ({ icon, title }: Props) => {
     <StyledCard>
       <StyledContent>
         {icon}
-        <Typography variant="body2" sx={{ paddingTop: "20px", fontSize: "15px" }}>
-          {title}
-        </Typography>
+        <StyledTitle variant="body2">{title}</StyledTitle>
       </StyledContent>
     </StyledCard>
   );
