@@ -1,4 +1,4 @@
-import { Box, styled } from "@mui/material";
+import { Box, Typography, styled } from "@mui/material";
 
 export const StyledCard = styled(Box)({
   display: "flex",
@@ -19,4 +19,9 @@ export const StyledContent = styled(Box)({
   flexDirection: "column",
   textAlign: "center",
   alignItems: "center",
+});
+
+export const StyledTitle = styled(Typography)({
+  paddingTop: "20px",
+  fontSize: "15px",
 });

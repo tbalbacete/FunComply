@@ -1,5 +1,11 @@
-import { Box, Card, CardMedia, Grid } from "@mui/material";
-import { StyledComplianceButton, StyledHeader } from "./Home.styles";
+import { Box, CardMedia, Grid } from "@mui/material";
+import {
+  StyledComplianceButton,
+  StyledComplianceContainer,
+  StyledGrid,
+  StyledHeader,
+  StyledHeaderLogo,
+} from "./Home.styles";
 import { FolderSimple, Star, WarningCircle } from "@phosphor-icons/react";
 import { HomeCard } from "@/Components";
 import { PreviewIcon } from "@/assets/PreviewIcon";
@@ -9,29 +15,21 @@ export const Home: React.FC = () => {
   return (
     <>
       <StyledHeader>
-        <Card
-          sx={{ border: "none", boxShadow: "none", background: "transparent" }}
-        >
+        <StyledHeaderLogo>
           <CardMedia
             sx={{ height: "35px", width: "147px" }}
             component="img"
             src="/rComply_Light.svg"
           />
-        </Card>
+        </StyledHeaderLogo>
         <Box sx={{ paddingLeft: "10px" }}>HOME</Box>
       </StyledHeader>
-      <Box
-        sx={{
-          marginTop: "15px",
-          padding: "0px 40px 30px 40px",
-          borderBottom: "2px solid rgba(224, 224, 224, 0.3)",
-        }}
-      >
+      <StyledComplianceContainer>
         <StyledComplianceButton startIcon={<WarningCircle size={28} />}>
           In Compliance
         </StyledComplianceButton>
-      </Box>
-      <Grid container columnSpacing={5} sx={{ padding: "20px 40px 40px 40px", borderBottom: "2px solid rgba(224, 224, 224, 0.3)" }}>
+      </StyledComplianceContainer>
+      <StyledGrid container columnSpacing={5}>
         <Grid item xs={3}>
           <HomeCard
             icon={<Star size={70} weight="fill" color="#9399a2" />}
@@ -50,7 +48,7 @@ export const Home: React.FC = () => {
         <Grid item xs={3}>
           <HomeCard icon={<PreviewIcon />} title="Preview" />
         </Grid>
-      </Grid>
+      </StyledGrid>
     </>
   );
 };

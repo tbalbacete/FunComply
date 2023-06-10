@@ -1,4 +1,4 @@
-import { Box, Button, styled } from "@mui/material";
+import { Box, Button, Card, Grid, styled } from "@mui/material";
 
 export const StyledHeader = styled(Box)({
   display: "flex",
@@ -11,6 +11,18 @@ export const StyledHeader = styled(Box)({
   top: "0",
   height: "77px",
   fontFamily: "Source Sans Pro, sans-serif",
+});
+
+export const StyledHeaderLogo = styled(Card)({
+  border: "none",
+  boxShadow: "none",
+  background: "transparent",
+});
+
+export const StyledComplianceContainer = styled(Box)({
+  marginTop: "15px",
+  padding: "0px 40px 30px 40px",
+  borderBottom: "2px solid rgba(224, 224, 224, 0.3)",
 });
 
 export const StyledComplianceButton = styled(Button)({
@@ -27,13 +39,7 @@ export const StyledComplianceButton = styled(Button)({
   },
 });
 
-export const StyledCard = styled(Box)({
-  display: "flex",
-  alignItems: "center",
-  justifyContent: "center",
-  height: "240px",
-  color: "white",
-  backgroundColor: "#283345",
-  boxShadow: "0 1px 12px 0 rgba(0, 0, 0, 0.25)",
-  borderRadius: "3px",
+export const StyledGrid = styled(Grid)({
+  padding: "20px 40px 40px 40px",
+  borderBottom: "2px solid rgba(224, 224, 224, 0.3)",
 });
